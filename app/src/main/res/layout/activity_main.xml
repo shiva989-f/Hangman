@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+            <TextView
+                android:id="@+id/guessesLeftTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/zeyada"
+                android:gravity="center"
+                android:text="Guesses: 10"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hintTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/zeyada"
+                android:gravity="center"
+                android:text="Hint: 5"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/hangmanImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hangman0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guessesLeftTV" />
+
+
+            <TextView
+                android:id="@+id/wordLenTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/zeyada"
+                android:gravity="center"
+                android:text="Word Length : 4"
+                android:textColor="@color/black"
+                android:textSize="46sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/hangmanImg"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/hangmanImg"
+                app:layout_constraintTop_toBottomOf="@+id/hangmanImg" />
+
+            <TextView
+                android:id="@+id/secretWordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/zeyada"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/wordLenTV"
+                app:layout_constraintStart_toStartOf="@+id/wordLenTV"
+                app:layout_constraintTop_toBottomOf="@+id/wordLenTV" />
+
+            <EditText
+                android:id="@+id/guessLetterET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/text_bg"
+                android:fontFamily="@font/zeyada"
+                android:gravity="center"
+                android:hint="@string/guess_letters_of_the_word"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/secretWordTV"
+                app:layout_constraintStart_toStartOf="@+id/secretWordTV"
+                app:layout_constraintTop_toBottomOf="@+id/secretWordTV" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/text_bg"
+                android:fontFamily="@font/zeyada"
+                android:paddingHorizontal="46dp"
+                android:text="@string/Try"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/guessLetterET"
+                app:layout_constraintStart_toStartOf="@+id/guessLetterET"
+                app:layout_constraintTop_toBottomOf="@+id/guessLetterET" />
+
+    <ImageView
+        android:id="@+id/restartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guessesLeftTV"
+        app:layout_constraintEnd_toStartOf="@+id/hintTV"
+        app:layout_constraintStart_toEndOf="@+id/guessesLeftTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_restart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

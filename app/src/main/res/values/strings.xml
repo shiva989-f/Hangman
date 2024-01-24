@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="Try">Try</string>
+    <string name="guess_letters_of_the_word">Guess letters of the word</string>
+</resources>
