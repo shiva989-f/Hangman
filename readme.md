@@ -1,2 +1,2 @@
-# Hangman Word Game using kotlin laguage
+# Hangman Word Game using kotlin language
 
